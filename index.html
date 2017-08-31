@@ -14,7 +14,7 @@
     
         
         
-        <style>
+        <style>  /** PACE **/
         
             body.pace-running:before {
               content: "";
@@ -39,33 +39,42 @@
             
         </style>
 
-        <style>
-            .xpatron { 
-            z-index:100;
-            background: #A3C7FF url(/Patron.png) 0px 0px/57px 57px repeat;
-            opacity: 0.5;
-            /** position:absolute; **/
-            position:fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            }
-        </style>
+        <style>  /** patron and failback background **/             
+        
+                  body {
+
+                    background: #dedede url(images/background.jpg) no-repeat center center fixed; 
+                    -ms-background-size: cover;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;	
+                    z-index:-110;  /** behind tubular **/
+                }
+
+                    /** tubular z-index:-99 **/
+
+
+                .x_bg{ 
+                    background: #dedede url(images/Patron.png) 0px 0px/57px 57px repeat;
+                    opacity: 0.5;
+                    position:absolute;
+                /** position:fixed; **/
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index:-90;  /** ahead tubular **/
+               }
+             
+                  
+        </style>       
 
 
 
-        <style>
+        <style>  /** Tumblr **/
 
-        body { 
-        background-color: transparent!important; 
-        /** opacity: 1!important; **/
-        }    
-
-
-        /** tumblr **/
-
-        .tumblr01 {
+         .tumblr01 {
             background-color: transparent!important; 
             position: fixed;
         /**    z-index: 1; **/
